@@ -1,0 +1,215 @@
+/*---------------------------------------------------
+    LESS Elements 0.6
+  ---------------------------------------------------
+    A set of useful LESS mixins by Dmitry Fadeyev
+    Special thanks for mixin suggestions to:
+      Kris Van Herzeele,
+      Benoit Adam,
+      Portenart Emile-Victor,
+      Ryan Faerman
+
+    More info at: http://lesselements.com
+-----------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+.layout,
+.wrapper {
+  min-height: 100%;
+}
+.content {
+  overflow: auto;
+  padding-bottom: 240px;
+}
+.footer {
+  position: relative;
+  margin-top: -240px;
+  height: 240px;
+  background: white;
+  clear: both;
+}
+.footer h5 {
+  font-size: 1.4em;
+}
+.footer .span4 {
+  position: relative;
+  padding-top: 30px;
+}
+.footer .span4 > .sprite {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+}
+.footer .row-fluid {
+  width: 985px;
+  margin: 0 auto;
+}
+.footer .sponsors {
+  list-style-type: none;
+  margin: 0;
+}
+.footer .sponsors li {
+  margin-bottom: 6px;
+}
+.footer ul a {
+  text-decoration: none;
+}
+.footer ul a :hover {
+  text-decoration: none;
+}
+.footer .social {
+  list-style-type: none;
+  margin: 0;
+}
+.footer .social li {
+  display: inline;
+}
+body:before {
+  content: "";
+  height: 100%;
+  float: left;
+  width: 0;
+  margin-top: -32767px;
+}
+body {
+  background: transparent url(../img/bg.jpg) repeat;
+}
+.layout {
+  text-align: center;
+  background: transparent url(../img/bg-2.jpg) no-repeat center bottom;
+  padding-bottom: 50px;
+}
+.layout > .wrapper {
+  margin: 0 auto;
+  width: 985px;
+  position: relative;
+}
+.layout > .wrapper > .content {
+  min-height: 300px;
+  text-align: left;
+  padding-top: 80px;
+  padding-bottom: 280px;
+  overflow: visible;
+}
+nav.main {
+  background: white;
+  height: 95px;
+}
+nav.main .logo {
+  position: absolute;
+  top: 49px;
+  left: 50px;
+  height: 85px;
+  width: 231px;
+  display: inline-block;
+  z-index: 1000;
+}
+nav.main ul {
+  list-style-type: none;
+  position: absolute;
+  width: 985px;
+  top: 65px;
+  margin-left: 0;
+  text-align: right;
+}
+nav.main ul li {
+  display: inline-block;
+}
+nav.main ul li a {
+  background: #6683b6;
+  color: white;
+  display: block;
+  padding: 10px 30px;
+}
+.box {
+  background: white;
+  padding: 10px 40px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.box.next {
+  width: 905px;
+  margin-bottom: 20px;
+  float: left;
+  position: relative;
+}
+.box.next img {
+  position: absolute;
+  top: -46px;
+  left: 320px;
+}
+.box.next .sprite {
+  display: inline-block;
+  margin-right: 50px;
+  float: left;
+}
+.box.next div {
+  height: 70px;
+  float: right;
+  width: 740px;
+  margin-top: 14px;
+}
+.box.next h1,
+.box.next h2,
+.box.next h3 {
+  margin: 0;
+  line-height: normal;
+}
+.box.next h1 {
+  font-size: 1.8em;
+  color: #f94d31;
+}
+.box.next h2,
+.box.next h3 {
+  font-size: 1.2em;
+  font-weight: normal;
+}
+/**
+ * Sprites
+ */
+.sprite {
+  background: url(../img/sprites.png) no-repeat;
+  display: inline-block;
+}
+.sprite-calendar {
+  width: 88px;
+  height: 100px;
+  background-position: 0px 0px;
+}
+.sprite-heart {
+  width: 70px;
+  height: 63px;
+  background-position: -111px -77px;
+}
+.sprite-icon-facebook {
+  width: 32px;
+  height: 32px;
+  background-position: -192px -86px;
+}
+.sprite-icon-google {
+  width: 32px;
+  height: 32px;
+  background-position: -192px -43px;
+}
+.sprite-icon-twitter {
+  width: 32px;
+  height: 32px;
+  background-position: -187px 0px;
+}
+.sprite-social {
+  width: 100px;
+  height: 64px;
+  background-position: 0px -111px;
+}
+.sprite-team {
+  width: 77px;
+  height: 66px;
+  background-position: -99px 0px;
+}
