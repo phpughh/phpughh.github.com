@@ -26,6 +26,13 @@ html, body {
   background: white;
   clear:both;
   
+  img.bg {
+    position: absolute;
+    z-index: -1;
+    left: 30%;
+    top: -298px;
+  }
+  
   h5 {
     font-size: 1.4em;
   }
@@ -88,13 +95,14 @@ body {
 
 .layout {
   text-align: center;
-  background: transparent url(../img/bg-2.jpg) no-repeat center bottom;
   padding-bottom: 50px;
+  background: transparent url(../img/wrapper.png) repeat-x;
   
   > .wrapper {
     margin: 0 auto;
     width: 985px;
     position: relative;
+    overflow: visible;
      
     > .content { 
       min-height: 300px;
@@ -137,6 +145,9 @@ nav.main {
         color: white;
         display: block;
         padding: 10px 30px;
+        -webkit-transform: skew(-10deg);
+        -moz-transform: skew(-10deg);
+        -o-transform: skew(-10deg);
       }
     }
   }

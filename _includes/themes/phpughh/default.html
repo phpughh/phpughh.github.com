@@ -26,14 +26,16 @@
 		<div class="layout">
 			<div class="wrapper clearfix">
 				<nav class="main">
-					<a href="/" class="logo">
-						<img src="{{ ASSET_PATH }}/img/logo.png" alt="{{ site.title }}" />
-					</a>
-					<ul>
-			            {% assign pages_list = site.pages %}
-			            {% assign group = 'navigation' %}
-			            {% include JB/pages_list %}
-					</ul>
+					<div>
+						<a href="/" class="logo">
+							<img src="{{ ASSET_PATH }}/img/logo.png" alt="{{ site.title }}" />
+						</a>
+						<ul>
+				            {% assign pages_list = site.pages %}
+				            {% assign group = 'navigation' %}
+				            {% include JB/pages_list %}
+						</ul>
+					</div>
 				</nav>
 				<div class="content clearfix">
         			{{ content }}
@@ -41,6 +43,7 @@
 			</div>
 		</div>
 		<div class="footer">
+        	<img class="bg" src="{{ ASSET_PATH }}/img/bg-2.jpg" alt="" />
 			<div class="row-fluid">
 				<div class="span4">
 					<h5>Get in touch</h5>
