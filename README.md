@@ -24,3 +24,11 @@ Assets findet man im Verzeichnis `assets/themes/phpughh` wieder. Icons sollten w
 in Spritesheets konvertiert werden. Ein sehr schönes HTML5 Tool dafür findet man unter <http://draeton.github.com/stitches/>
 
 Das erstellte CSS kann man einfach in die Less Datei kopieren.
+
+## Erstellen von Talks
+
+Talks können mit dem Befehl `rake talk title="Titel des Talks"` erstellt werden. Zusätzlich zum 
+`title` Parameter gibt es noch folgende Parameter
+
+ - `date` Datum des Talks
+ - `slide` URL zu hochgeladenen Slides
