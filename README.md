@@ -30,5 +30,6 @@ Das erstellte CSS kann man einfach in die Less Datei kopieren.
 Talks können mit dem Befehl `rake talk title="Titel des Talks"` erstellt werden. Zusätzlich zum 
 `title` Parameter gibt es noch folgende Parameter
 
+ - `description` Beschreibung für diesen Talk
  - `date` Datum des Talks
  - `slide` URL zu hochgeladenen Slides

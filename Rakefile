@@ -78,6 +78,7 @@ task :talk do
   abort("rake aborted: '#{CONFIG['talks']}' directory not found.") unless FileTest.directory?(CONFIG['talks'])
   title = ENV["title"] || "new-talk"
   slide = ENV["slide"]
+  description = ENV["description"]
   slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
   begin
     date = (ENV['date'] ? Time.parse(ENV['date']) : Time.now).strftime('%Y-%m-%d')
@@ -95,9 +96,9 @@ task :talk do
     post.puts "---"
     post.puts "layout: talk"
     post.puts "title: \"#{title.gsub(/-/,' ')}\""
-    post.puts 'description: ""'
+    post.puts "description: \"#{description}\""
     post.puts "category: talk"
-    post.puts "tags: [talks]"
+    post.puts "tags: [\"talk\"]"
     if ENV['slide']
       post.puts "slide: \"#{slide}\""
     end
