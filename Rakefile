@@ -10,6 +10,8 @@ CONFIG = {
   'layouts' => File.join(SOURCE, "_layouts"),
   'posts' => File.join(SOURCE, "_posts"),
   'post_ext' => "md",
+  'talks' => File.join(SOURCE, "talks/_posts"),
+  'talk_ext' => 'md',
   'theme_package_version' => "0.1.0"
 }
 
@@ -69,6 +71,40 @@ task :post do
     post.puts "{% include JB/setup %}"
   end
 end # task :post
+
+# Usage: rake talk title="A Title" [date="2012-02-09"] [slide="http://slideshare.com/id"]
+desc "Begin a new talk in #{CONFIG['talks']}"
+task :talk do
+  abort("rake aborted: '#{CONFIG['talks']}' directory not found.") unless FileTest.directory?(CONFIG['talks'])
+  title = ENV["title"] || "new-talk"
+  slide = ENV["slide"]
+  slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+  begin
+    date = (ENV['date'] ? Time.parse(ENV['date']) : Time.now).strftime('%Y-%m-%d')
+  rescue Exception => e
+    puts "Error - date format must be YYYY-MM-DD, please check you typed it correctly!"
+    exit -1
+  end
+  filename = File.join(CONFIG['talks'], "#{date}-#{slug}.#{CONFIG['talk_ext']}")
+  if File.exist?(filename)
+    abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+  end
+  
+  puts "Creating new talk: #{filename}"
+  open(filename, 'w') do |post|
+    post.puts "---"
+    post.puts "layout: talk"
+    post.puts "title: \"#{title.gsub(/-/,' ')}\""
+    post.puts 'description: ""'
+    post.puts "category: talk"
+    post.puts "tags: [talks]"
+    if ENV['slide']
+      post.puts "slide: \"#{slide}\""
+    end
+    post.puts "---"
+    post.puts "{% include JB/setup %}"
+  end
+end # task :talk
 
 # Usage: rake page name="about.html"
 # You can also specify a sub-directory path.

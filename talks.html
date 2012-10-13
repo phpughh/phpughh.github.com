@@ -3,6 +3,14 @@ title: Talks
 group: navigation
 layout: default
 ---
-<p>
-	Alle unsere Talks
-</p>
+<div class="box">
+	<h1>Talks der PHP Usergroup Hamburg</h1>
+	<p>
+		Hier listen wir Talks auf, die w&auml;hrend der Treffen gehalten wurden und verlinken
+		zu den ver&ouml;ffentlichten Slides.
+	</p>
+</div>
+<div class="box">
+	{% assign posts_collate = site.categories.talks %}
+	{% include phpughh/posts_collate %}
+</div>
