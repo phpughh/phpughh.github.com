@@ -4,6 +4,7 @@
 		<title>PHP Usergroup Hamburg</title>
 		
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
 	    <meta name="author" content="{{ site.author.name }}">
 	    {% if page.canonical %}<meta name="canonical" content="{{ page.canonical }}">{% endif %}
@@ -27,8 +28,8 @@
 	<body>
 		<div class="layout">
 			<div class="wrapper clearfix">
-				<nav class="main">
-					<div>
+				<nav class="main row-fluid">
+					<div class="span12">
 						<a href="/" class="logo">
 							<img src="{{ ASSET_PATH }}/img/logo.png" alt="{{ site.title }}" />
 						</a>
@@ -39,7 +40,7 @@
 						</ul>
 					</div>
 				</nav>
-				<div class="content clearfix">
+				<div class="content clearfix container-fluid">
         			{{ content }}
 				</div>
 			</div>
