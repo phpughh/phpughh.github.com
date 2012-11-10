@@ -6,10 +6,15 @@ title: PHP Usergroup Hamburg - Monatliches Treffen von PHP Entwicklern
 <div class="box next clearfix row-fluid">
 	<span class="sprite sprite-calendar"></span>
 	<div>
-		<h1>N&auml;chstes Meetup am <time datetime="2012-11-13T18:30Z">13.11.2012</time></h1>
-		<h2>Die Location wird noch festgelegt</h2>
-		<h3>in Hamburg</h3>
-		<img src="/assets/themes/phpughh/img/box-top.png" alt="" />
+		<h1 data-meetup="date">Nächstes Meetup am </h1>
+        <h2 data-meetup-ajax="state"><img class="ajax-loader" src="/assets/themes/phpughh/img/ajax-loader.gif" alt="" />Daten für nächstes Treffen werden geladen ...</h2>
+        <h2 data-meetup-ajax="error">Fehler beim ermitteln des nächsten Treffen</h2>
+        <h1 data-meetup="no-upcoming-meetup">Es gibt keine anstehenden Treffen</h1>
+        <h2 data-meetup="no-upcoming-meetup">Du kannst eins vorschlagen!</h2>
+        <h2 data-meetup="no-location">Die Location wird noch festgelegt</h2>
+		<h2 data-meetup="provider">Bei </h2>
+		<h3 data-meetup="location"></h3>
+		<img class="box-top" src="/assets/themes/phpughh/img/box-top.png" alt="" />
 	</div>
 </div>
 <div class="row-fluid">
@@ -43,13 +48,5 @@ title: PHP Usergroup Hamburg - Monatliches Treffen von PHP Entwicklern
 			<h4>Twitter</h4>
 			<div id="twitter-box"></div>
 		</div>
-		<!--
-		<div class="box">
-			<h4>Meetup</h4>
-			<div style="width: 225px;" id="1347569642806">
-          		<div class="mug-badge"></div>
-      		</div>
-		</div>
-		-->
 	</div>
 </div>

@@ -167,10 +167,13 @@ nav.main ul li a {
   float: left;
   position: relative;
 }
-.box.next img {
+.box.next img.box-top {
   position: absolute;
   top: -46px;
   left: 320px;
+}
+.box.next img.ajax-loader {
+    margin-right: 8px;
 }
 .box.next .sprite {
   display: inline-block;
@@ -197,6 +200,10 @@ nav.main ul li a {
 .box.next h3 {
   font-size: 1.2em;
   font-weight: normal;
+}
+[data-meetup-ajax="error"],
+[data-meetup] {
+    display: none;
 }
 /**
  * Sprites
