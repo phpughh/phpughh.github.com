@@ -162,7 +162,7 @@ nav.main ul li a {
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 .box.next {
-  width: 905px;
+  width: 865px;
   margin-bottom: 20px;
   float: left;
   position: relative;
@@ -183,7 +183,7 @@ nav.main ul li a {
 .box.next div {
   height: 70px;
   float: right;
-  width: 740px;
+  width: 726px;
   margin-top: 14px;
 }
 .box.next h1,
