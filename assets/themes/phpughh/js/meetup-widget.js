@@ -1,6 +1,10 @@
 Meetup = {
     apiCallUrl : 'http://api.meetup.com/2/events?status=upcoming&_=1352414462804&order=time&group_urlname=phpughh&desc=false&offset=0&format=json&page=200&fields=&sig_id=38055742&sig=6191815fe668fea15b3c5b86889fd093e7cc46ec',
 
+    DEFAULT_PROVIDER : 'Ort wird noch festgelegt',
+
+    DEFAULT_ADDRESS : 'x',
+
     getFormattedDate : function(date) {
         return date.getDate() + '.' + (date.getMonth()+1) + '.' + date.getFullYear();
     },
@@ -28,14 +32,14 @@ Meetup = {
     },
 
     applyProvider : function(provider) {
-        if (provider.length > 0) {
+        if (provider.length > 0 && provider !== Meetup.DEFAULT_PROVIDER) {
             var element = jQuery("[data-meetup='provider']");
             element.text(element.text() + provider).show();
         }
     },
 
     applyLocation : function(address, city) {
-        if (address.length > 0) {
+        if (address.length > 0 && address !== Meetup.DEFAULT_ADDRESS) {
             var element = jQuery("[data-meetup='location']");
             element.text(element.text() + address + ', ' + city).show();
         } else {
@@ -93,7 +97,7 @@ Meetup = {
     }
 };
 
-jQuery(document).ready(function(){
+jQuery(function(){
     Meetup.call();
 });
 
