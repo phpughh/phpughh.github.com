@@ -36,11 +36,11 @@ Talks können mit dem Befehl `rake talk title="Titel des Talks"` erstellt werden
  - `slide` URL zu hochgeladenen Slides
 
 ## ToDos
-- Supporter und Team auf eigene Seite (about us)n
-- Mail/MX Records?!
+- Supporter und Team auf eigene Seite (about us)
+- -Mail/MX Records?! -> Checkdomain macht liste-
 - *News/Blog? Moeglichst einfach*
-- Meetup verlinken
-- Homepage runtime in VM?! 
+- Meetup verlinken im Header
+- Homepage runtime in VM?!
 - Imprint page anlegen
 - Facebook und G+ raus
 - Tweets von @phpughh in den stream
