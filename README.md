@@ -43,4 +43,4 @@ Talks können mit dem Befehl `rake talk title="Titel des Talks"` erstellt werden
 - Homepage runtime in VM?!
 - Imprint page anlegen
 - Facebook und G+ raus
-- Tweets von @phpughh in den stream
+- -Tweets von @phpughh in den stream-
