@@ -34,7 +34,7 @@ Usage:
     	{% if post.slideurl %}
     		<a target="_blank" href="{{ post.slideurl }}">{{ post.title }}</a></li>
     	{% else %}
-	    	<a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+    		{{ post.title }}
 	    {% endif %}
   
     {% if forloop.last %}

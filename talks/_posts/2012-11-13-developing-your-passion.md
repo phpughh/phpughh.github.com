@@ -4,6 +4,6 @@ title: "Developing your passion"
 description: ""
 category: talk
 tags: ["talk"]
-slide: "https://speakerdeck.com/seemantk/developing-with-passion"
+slideurl: "https://speakerdeck.com/seemantk/developing-with-passion"
 ---
 {% include JB/setup %}

@@ -100,7 +100,7 @@ task :talk do
     post.puts "category: talk"
     post.puts "tags: [\"talk\"]"
     if ENV['slide']
-      post.puts "slide: \"#{slide}\""
+      post.puts "slideurl: \"#{slide}\""
     end
     post.puts "---"
     post.puts "{% include JB/setup %}"
