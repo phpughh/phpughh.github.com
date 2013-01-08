@@ -5,6 +5,8 @@ Meetup = {
 
     DEFAULT_ADDRESS : 'x',
 
+    BASE_URL : 'http://www.meetup.com/phpughh',
+
     getFormattedDate : function(date) {
         return date.getDate() + '.' + (date.getMonth()+1) + '.' + date.getFullYear();
     },
@@ -17,8 +19,9 @@ Meetup = {
         jQuery("[data-meetup-ajax='state']").hide();
     },
 
-    showNoUpcomingMeetup : function() {
-        jQuery("[data-meetup='no-upcoming-meetup']").show();
+    showNoUpcomingEvent : function() {
+        Meetup.applyEventUrl(Meetup.BASE_URL);
+        jQuery("[data-meetup='no-upcoming-event']").show();
     },
 
     applyDate : function(timestamp) {
@@ -48,34 +51,45 @@ Meetup = {
 
     },
 
+    applyEventUrl : function(url) {
+        var aTag = jQuery('<a></a>');
+        aTag.attr('href', url);
+        aTag.attr('target', '_blank');
+        jQuery('div.next').wrapInner(aTag);
+    },
+
+    handleEventItem : function(result) {
+        var providerName = '';
+        var address = '';
+        var city = '';
+
+        if (typeof result.venue !== "undefined") {
+            address = result.venue.address_1;
+            city = result.venue.city;
+            url = result.event_url;
+            if (typeof result.venue.name  !== "undefined") {
+                providerName = result.venue.name
+            }
+        }
+
+        Meetup.applyDate(result.time);
+        Meetup.applyProvider(providerName);
+        Meetup.applyLocation(address, city);
+        Meetup.applyEventUrl(url);
+    },
+
     handleMeetupResult : function(data) {
+
         if (typeof data.results === "undefined") {
             Meetup.handleError("Request error, no results received", data);
             return;
         }
 
         if (data.results.length == 0 || typeof data.results[0].time === "undefined") {
-            Meetup.showNoUpcomingMeetup();
-            return;
+            Meetup.showNoUpcomingEvent();
+        } else {
+            Meetup.handleEventItem(data.results[0]);
         }
-
-        Meetup.applyDate(data.results[0].time);
-
-        var providerName = '';
-        var address = '';
-        var city = '';
-
-        if (typeof data.results[0].venue !== "undefined") {
-            address = data.results[0].venue.address_1;
-            city  = data.results[0].venue.city;
-            if (typeof data.results[0].venue.name  !== "undefined") {
-                providerName = data.results[0].venue.name
-            }
-        }
-
-        Meetup.applyProvider(providerName);
-
-        Meetup.applyLocation(address, city);
     },
 
     handleError : function(msg, data) {
