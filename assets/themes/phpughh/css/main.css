@@ -161,6 +161,16 @@ nav.main ul li a {
   -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
+
+.box.next a,
+.box.next a:active ,
+.box.next a:visited {
+  color: #333333
+}
+.box.next a:hover h1,
+.box.next a:hover h2 {
+  color: #5F5F5F;
+}
 .box.next {
   width: 865px;
   margin-bottom: 20px;
