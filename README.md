@@ -37,5 +37,4 @@ Talks können mit dem Befehl `rake talk title="Titel des Talks"` erstellt werden
 
 ## ToDos
 - *News/Blog? Moeglichst einfach*
-- Meetup verlinken im Header
 - Homepage runtime in VM?!
