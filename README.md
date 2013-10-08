@@ -6,7 +6,9 @@ Für die Generierung der Webseite nutzen wir Jekyll-Bootstrap.
 Die Dokumentation findet man unter: <http://jekyllbootstrap.com>
 
 Ein Jekyll Server kann einfach im Root Verzeichnis gestartet werden.
-    $ jekyll serve
+```bash
+$ jekyll serve
+```
 
 ## Template
 
