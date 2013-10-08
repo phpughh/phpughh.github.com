@@ -34,7 +34,3 @@ Talks können mit dem Befehl `rake talk title="Titel des Talks"` erstellt werden
  - `description` Beschreibung für diesen Talk
  - `date` Datum des Talks
  - `slide` URL zu hochgeladenen Slides
-
-## ToDos
-- *News/Blog? Moeglichst einfach*
-- Homepage runtime in VM?!
