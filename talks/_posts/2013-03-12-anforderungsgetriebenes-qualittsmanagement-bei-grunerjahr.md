@@ -1,6 +1,6 @@
 ---
 layout: talk
-title: "Anforderungsgetriebenes Qualitätsmanagement bei Gruner+Jahr"
+title: "Anforderungsgetriebenes Qualit&auml;tsmanagement bei Gruner+Jahr"
 description: ""
 category: talk
 tags: ["talk"]
