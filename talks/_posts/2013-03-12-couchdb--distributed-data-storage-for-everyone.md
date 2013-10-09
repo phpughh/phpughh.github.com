@@ -1,6 +1,6 @@
 ---
 layout: talk
-title: "CouchDB — Distributed Data Storage for Everyone"
+title: "CouchDB - Distributed Data Storage for Everyone"
 description: ""
 category: talk
 tags: ["talk"]
