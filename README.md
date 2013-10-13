@@ -7,7 +7,7 @@ Die Dokumentation findet man unter: <http://jekyllbootstrap.com>
 
 Ein Jekyll Server kann einfach im Root Verzeichnis gestartet werden.
 ```bash
-$ jekyll serve
+$ jekyll serve -w
 ```
 
 ## Template
