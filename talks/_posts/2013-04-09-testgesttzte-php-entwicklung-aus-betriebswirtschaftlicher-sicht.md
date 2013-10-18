@@ -1,6 +1,6 @@
 ---
 layout: talk
-title: "Testgest&uuml;tzte PHP Entwicklung aus betriebswirtschaftlicher Sicht"
+title: "Testgestützte PHP Entwicklung aus betriebswirtschaftlicher Sicht"
 description: ""
 category: talk
 tags: ["talk"]
