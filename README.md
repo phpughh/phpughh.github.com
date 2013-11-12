@@ -1,5 +1,13 @@
 # PHP Usergroup Hamburg
 
+## Setup
+
+```bash
+git clone git@github.com:phpughh/phpughh.github.com.git && cd phpughh.github.com
+bundle install
+rake preview
+```
+
 ## Technik
 
 Für die Generierung der Webseite nutzen wir Jekyll-Bootstrap. 
@@ -7,7 +15,7 @@ Die Dokumentation findet man unter: <http://jekyllbootstrap.com>
 
 Ein Jekyll Server kann einfach im Root Verzeichnis gestartet werden.
 ```bash
-$ jekyll serve -w
+rake preview
 ```
 
 ## Template
