@@ -2,21 +2,12 @@ language: ruby
 rvm:
   - 1.9.3
 before_install:
-  - npm install -g grunt-cli
-  - git clone git://github.com/n1k0/casperjs.git ~/casperjs
-  - cd ~/casperjs
-  - git checkout tags/1.1-beta3
-  - export PATH=$PATH:`pwd`/bin
-  - cd -
-before_script:
-  - npm install
-  - phantomjs --version
-  - casperjs --version
+  - npm install casperjs
 
 notifications:
   email: false
 
 script:
-  - bundle exec rake travis
+  - jekyll serve --detach --port 4000
   - sleep 3
-  - npm test
+  - ./node_modules/.bin/casperjs test tests/*
