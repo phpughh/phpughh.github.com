@@ -136,6 +136,11 @@ task :preview do
   system "jekyll serve -w"
 end # task :preview
 
+desc "Launch travis environment"
+task :travis do
+  system "jekyll serve --detach --port 4000"
+end # task :travis
+
 # Public: Alias - Maintains backwards compatability for theme switching.
 task :switch_theme => "theme:switch"
 
