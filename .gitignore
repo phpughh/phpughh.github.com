@@ -11,3 +11,4 @@ Thumbs.db
 
 .rbenv-version
 .rvmrc
+node_modules
