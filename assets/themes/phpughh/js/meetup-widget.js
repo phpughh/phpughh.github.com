@@ -1,5 +1,5 @@
 Meetup = {
-    apiCallUrl : 'http://api.meetup.com/2/events?status=upcoming&_=1352414462804&order=time&group_urlname=phpughh&desc=false&offset=0&format=json&page=200&fields=&sig_id=38055742&sig=6191815fe668fea15b3c5b86889fd093e7cc46ec',
+    apiCallUrl : 'https://api.meetup.com/2/events?offset=0&format=json&limited_events=False&group_urlname=phpughh&page=200&fields=&_=1352414462804&order=time&status=upcoming&desc=false&sig_id=3821830&sig=39839da356fff43eda14bdc912b1021c981d0411',
 
     DEFAULT_PROVIDER : 'Ort wird noch festgelegt',
 
