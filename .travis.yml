@@ -1,0 +1,15 @@
+language: ruby
+rvm:
+  - 1.9.3
+cache: bundler
+
+before_install:
+  - npm install casperjs
+
+notifications:
+  email: false
+
+script:
+  - bundle exec jekyll serve --detach --port 4000
+  - sleep 3
+  - ./node_modules/.bin/casperjs test tests/test_*.js
